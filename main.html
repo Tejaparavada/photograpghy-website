@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAI SURYA DIGITALS | Photography</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0b0b0b;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav h1 {
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff3c1f;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT */
+.hero-left {
+    width: 50%;
+    padding: 100px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-left h1 {
+    font-size: clamp(28px, 5vw, 55px);
+    margin-left: 20px;
+}
+
+.tag {
+    margin-left: 20px;
+}
+
+.hero-right::before {
+    left: -150px;
+    width: 250px;
+}
+
+.btn {
+    margin-top: 30px;
+    background: #ff3c1f;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: white;
+    width: fit-content;
+}
+
+/* RIGHT */
+.hero-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-right::before {
+    content: "";
+    position: absolute;
+    left: -80px;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background: #0b0b0b;
+    transform: skewX(-20deg);
+}
+
+/* SECTION */
+section {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+/* SERVICES */
+.services {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 260px;
+    padding: 25px;
+    background: #111;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: #1a1a1a;
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* CONTACT */
+.contact {
+    background: #111;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    padding: 15px;
+    border-radius: 60%;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+.tag {
+    color: #ff3c1f;   /* 🔥 RED COLOR */
+    font-size: 14px;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* small red line before text */
+.tag span {
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background: #ff3c1f;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-left, .hero-right {
+        width: 100%;
+    }
+
+    .hero-left {
+        padding: 40px;
+    }
+
+    .hero-left h1 {
+        font-size: 30px;
+    }
+
+    .hero-right::before {
+        display: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>SAI SURYA DIGITALS</h1>
+    <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-left">
+        <p class="tag">— CREATIVE PHOTOGRAPHY</p>
+        <h1>
+            PHOTOGRAPHY <br>
+            MAKE US HAPPY <br>
+            TAKE A SHOT.
+        </h1>
+        <a href="#portfolio" class="btn">WATCH PORTFOLIO</a>
+    </div>
+
+    <div class="hero-right"> 
+        <img src="GPHE2659.JPG">
+    </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Wedding Photography</h3>
+            <p>Cinematic wedding storytelling.</p>
+        </div>
+        <div class="card">
+            <h3>Videography</h3>
+            <p>High-end cinematic films.</p>
+        </div>
+        <div class="card">
+            <h3>Pre-Wedding songs</h3>
+            <p>Beautiful romantic shoots.</p>
+        </div>
+        <div class="card">
+            <h3>Drone Photography</h3>
+            <p>Beautiful romantic shoots.</p>
+        </div>
+        <div class="card">
+            <h3>Candid Photography</h3>
+            <p>Brand & product shoots.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0">
+            <div class="overlay">Wedding</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+            <div class="overlay">Portrait</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba">
+            <div class="overlay">Cinematic</div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section>
+    <h2>About Us</h2>
+    <p>
+        SAI SURYA DIGITALS  delivers premium photography & videography with cinematic storytelling.
+    </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: paravadaappalanaidu443@email.com</p>
+    <p>Phone: +91 9848909443</p>
+</section>
+
+<!-- WHATSAPP -->
+<a class="whatsapp"
+href="https://wa.me/919848909443?text=Hi%20I%20want%20to%20book%20a%20shoot"
+target="_blank">💬</a>
+
+</body>
+</html>
